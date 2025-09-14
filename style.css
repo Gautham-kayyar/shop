@@ -14,14 +14,47 @@ body {
     padding: 20px;
 }
 
-/* Typography, Buttons, etc. remain the same */
-h1, h2, h3 { font-weight: 600; margin-bottom: 15px; color: #222; }
-h1 { font-size: 2.5em; }
-h2 { font-size: 2em; text-align: center; margin-bottom: 30px; }
-a { color: #007bff; text-decoration: none; transition: color 0.3s ease; }
-a:hover { color: #0056b3; }
-.button { display: inline-block; padding: 12px 24px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px; transition: background-color 0.3s ease; }
-.button:hover { background-color: #0056b3; }
+/* Typography */
+h1, h2, h3 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
 
 /* Header */
 header {
@@ -40,12 +73,9 @@ header .container {
 }
 
 header .logo a {
-    display: inline-block;
-    /* === NEW CSS ADDED FOR ALIGNMENT === */
     display: flex;
     align-items: center;
-    gap: 8px; /* Adds a small space between the logo and the text */
-    /* === END OF NEW CSS === */
+    gap: 8px;
 }
 
 header .logo img {
@@ -54,13 +84,11 @@ header .logo img {
     display: block;
 }
 
-/* === NEW CSS RULE FOR THE TEXT === */
 .logo-text {
-    font-size: 1.5em;  /* Adjust size as needed */
+    font-size: 1.5em;
     font-weight: bold;
-    color: #E60026;   /* A standard, strong red color */
+    color: #E60026;
 }
-/* === END OF NEW RULE === */
 
 header nav ul {
     list-style: none;
@@ -84,53 +112,238 @@ header nav ul li a:hover {
     background-color: #f2f2f2;
 }
 
-
-/* All other sections (Hero, Services, About, Contact, Footer, Responsive) remain unchanged */
-#hero { background-color: #f0f8ff; padding: 80px 0; text-align: center; }
-#hero .container { max-width: 800px; }
-#hero h1 { font-size: 3em; margin-bottom: 20px; }
-#hero p { font-size: 1.2em; margin-bottom: 30px; }
-#services { padding: 60px 0; background-color: #fff; }
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-.service-card { background-color: #f9f9f9; padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.service-card:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); }
-.service-card i { margin-bottom: 15px; color: #007bff; }
-.service-card h3 { margin-bottom: 10px; font-size: 1.3em; }
-.service-card p { font-size: 1em; color: #555; }
-#about { padding: 60px 0; background-color: #f9f9f9; }
-.about-content { display: flex; gap: 30px; align-items: center; }
-.about-image { flex: 1; }
-.about-image img { width: 100%; border-radius: 8px; }
-.about-text { flex: 1; font-size: 1.1em; color: #555; }
-#contact { padding: 60px 0; background-color: #fff; }
-.contact-form { flex: 1; max-width: 600px; margin: 0 auto; }
-#contact .container{ display: flex; flex-direction: row; justify-content: center; align-items: start; gap: 50px; }
-.contact-form form { display: flex; flex-direction: column; }
-.form-group { margin-bottom: 20px; }
-.form-group label { display: block; margin-bottom: 5px; font-weight: 600; }
-.form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em; }
-.contact-details { flex: 1; max-width: 400px; }
-.contact-details h3 { margin-bottom: 15px; font-size: 1.4em; }
-.contact-details p { font-size: 1.1em; color: #555; }
-footer { background-color: #333; color: #fff; text-align: center; padding: 20px 0; }
-@media (max-width: 768px) {
-    .container { width: 90%; }
-    header .container { flex-direction: column; align-items: center; }
-    header nav { margin-top: 15px; }
-    header nav ul { flex-direction: column; align-items: center; }
-    header nav ul li { margin-left: 0; margin-bottom: 10px; }
-    #hero { padding: 60px 0; }
-    #hero h1 { font-size: 2.5em; }
-    .about-content { flex-direction: column; }
-    .contact-form{ max-width: 100%; }
-    #contact .container{ flex-direction: column; align-items: center; gap: 20px; }
+/* Hero Section */
+#hero {
+    background-color: #f0f8ff;
+    padding: 80px 0;
+    text-align: center;
 }
-/* Style for the new Gmail button */
+
+#hero .container {
+    max-width: 800px;
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Services Section */
+#services {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card i {
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* About Section */
+#about {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.about-content {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.about-text {
+    flex: 1;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+#contact .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px; /* Prevents form from getting too squished */
+    max-width: 600px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Important for consistent sizing */
+}
+
+.contact-details {
+    flex: 1;
+    min-width: 300px; /* Prevents details from getting too squished */
+}
+
+.contact-details h3 {
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.contact-details p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Gmail Button Style */
 .gmail-button {
-    margin-top: 15px; /* Adds some space above the button */
-    background-color: #DB4437; /* Google/Gmail's red color */
+    margin-top: 15px;
+    background-color: #DB4437;
 }
 
 .gmail-button:hover {
-    background-color: #c13a2e; /* A slightly darker red for the hover effect */
+    background-color: #c13a2e;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* ================================================= */
+/* === MOBILE FRIENDLY / RESPONSIVE DESIGN STYLES === */
+/* ================================================= */
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* More screen space on mobile */
+    }
+
+    /* Header: Stack logo and navigation vertically and center them */
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    header .logo {
+        margin-bottom: 15px;
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack nav links vertically */
+        align-items: center;
+        padding: 0;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    
+    /* Hero: Reduce text size for better fit */
+    #hero {
+        padding: 60px 0;
+    }
+
+    #hero h1 {
+        font-size: 2.2em; /* Smaller h1 on mobile */
+    }
+
+    #hero p {
+        font-size: 1.1em;
+    }
+    
+    h2 {
+        font-size: 1.8em; /* Smaller h2 on mobile */
+    }
+
+    /* About: Stack image and text vertically */
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    /* Contact: Ensure form and details stack vertically and are centered */
+    #contact .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .contact-form, .contact-details {
+        width: 100%; /* Take up full width of the container */
+        max-width: 500px; /* Optional: limit max width even on mobile */
+        text-align: center; /* Center the text in the details */
+    }
 }
